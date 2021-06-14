@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import styled from 'styled-components';
+import { useTheme } from 'styled-components';
+
+
+const Container = styled.div`
+  width: 100%;
+  border: ${props => `1px solid ${props.theme.colorTheme.backgroundColor}`};
+  background-color: ${props => props.theme.colorTheme.backgroundColor};
+  color: ${({theme: { colorTheme : {font}}}) => font.color};
+`;
+
+const Heading = styled.h1`
+  background-color: ${({ theme: { colorTheme:  { backgroundColor } }} ) => backgroundColor};
+  color: ${({theme: { colorTheme:   {font}}}) => font.color};
+`;
 
 function App() {
+  const themeObject = useTheme();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Container>
+        <Heading isHeading={true}>Hello world!</Heading>
+        <h2>By the power of styled-components!</h2>
+        {console.log("imprimindo o objeto theme style selecionado.", themeObject)}
+      </Container>
   );
 }
 
