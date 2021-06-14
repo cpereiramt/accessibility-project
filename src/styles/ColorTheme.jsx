@@ -1,7 +1,12 @@
 import React from "react";
 import {ThemeProvider } from "styled-components";
-import darkTheme from './stylesObjects/darkTheme';
-import lightTheme from './stylesObjects/lightTheme';
+import darkTheme from './stylesObjects/colorSchemas/darkTheme';
+import lightTheme from './stylesObjects/colorSchemas/lightTheme';
+
+const colorTheme = {
+ darkTheme,
+ lightTheme,    
+};
 
  const chooseTheme = (colorSchema) => {
      switch (colorSchema) {
@@ -14,10 +19,6 @@ import lightTheme from './stylesObjects/lightTheme';
      }
   };  
      
- const colorTheme = {
-  darkTheme,
-  lightTheme,    
-};  
 
 
   const ColorTheme = ({ children, colorSchema }) => (
