@@ -1,4 +1,3 @@
-import './App.css';
 import styled from 'styled-components';
 import { useTheme } from 'styled-components';
 

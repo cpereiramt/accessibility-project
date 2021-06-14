@@ -7,7 +7,7 @@ import ColorTheme from './styles/ColorTheme';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ColorTheme colorSchema="dark">
+    <ColorTheme colorSchema="light">
        <App />
     </ColorTheme>
   </React.StrictMode>,
