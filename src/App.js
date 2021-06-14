@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useTheme } from 'styled-components';
-
+import SimpleForm from './components/ExampleAccessibilityTestComponent/index'
 
 const Container = styled.div`
   width: 100%;
@@ -18,11 +18,12 @@ function App() {
   const themeObject = useTheme();
 
   return (
-      <Container>
+    <Container>
+       <SimpleForm />
         <Heading isHeading={true}>Hello world!</Heading>
         <h2>By the power of styled-components!</h2>
         {console.log("imprimindo o objeto theme style selecionado.", themeObject)}
-      </Container>
+      </Container> 
   );
 }
 
