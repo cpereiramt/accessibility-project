@@ -17,12 +17,13 @@ const colorTheme = {
          default:
              return colorTheme.lightTheme;
      }
-  };  
+  };
      
 
 
   const ColorTheme = ({ children, colorSchema }) => (
     <ThemeProvider theme={chooseTheme(colorSchema)}>{children}
+    {console.log(chooseTheme(colorSchema))}
     </ThemeProvider>
   );
 

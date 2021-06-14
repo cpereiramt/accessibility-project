@@ -1,8 +1,9 @@
 const darkTheme = {
+    colorTheme : {
     backgroundColor: '#000000',
     font : {
-    color: 'white',
+       color: 'white',
     }
-    
+}
 }
 export default darkTheme;
