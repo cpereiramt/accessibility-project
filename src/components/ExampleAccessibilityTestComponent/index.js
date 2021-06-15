@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {useTheme } from 'styled-components';
+import { InputText } from 'primereact/inputtext';
 
 
 export default function SimpleForm({backgroundColor, borderRadius, padding}) {
@@ -13,6 +14,8 @@ export default function SimpleForm({backgroundColor, borderRadius, padding}) {
       <h5 style={{color: theme.font.color}}>Gender</h5>
       <label style={{color: theme.font.color}} htmlFor="male">Male</label> <input type="radio" name="gender" value="Male" id="male" />
       <label style={{color: theme.font.color}} htmlFor="female">Female</label> <input type="radio" name="gender" value="Female" id="female"/>
+      {/* PrimeReact Components */}
+      <InputText style={{color: theme.font.color}} value={"value"} />
     </form>
   );
 }
