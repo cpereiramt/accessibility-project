@@ -6,7 +6,7 @@ import SimpleForm from './index'
 
 //👇 This default export determines where your story goes in the story list
 export default {
-  title: 'My-Components/SimpleForm',
+  title: 'Presentational-Components/SimpleForm',
   component: SimpleForm,
   argTypes: {
     backgroundColor: { control: 'color' },
