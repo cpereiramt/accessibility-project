@@ -22,6 +22,7 @@ export default function SimpleForm({backgroundColor, borderRadius, padding}) {
 }
 
 SimpleForm.propTypes = {
+  /** Changes the background color of the component */
   backgroundColor : PropTypes.string,
   borderRadius : PropTypes.number,
   padding : PropTypes.number,
