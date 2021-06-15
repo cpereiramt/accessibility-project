@@ -15,7 +15,8 @@ export default function SimpleForm({backgroundColor, borderRadius, padding}) {
       <label style={{color: theme.font.color}} htmlFor="male">Male</label> <input type="radio" name="gender" value="Male" id="male" />
       <label style={{color: theme.font.color}} htmlFor="female">Female</label> <input type="radio" name="gender" value="Female" id="female"/>
       {/* PrimeReact Components styling*/}
-      <InputText style={{backgroundColor: theme.backgroundColor, color: theme.font.color, padding:"1px"}} value={"value"} />
+      <label htmlFor="inputTest" style={{backgroundColor: theme.backgroundColor, color: theme.font.color, padding:"1px"}}>Test</label>
+      <InputText id="inputTest" style={{backgroundColor: theme.backgroundColor, color: theme.font.color, padding:"1px"}} value={"value"} />
     </form>
   );
 }
