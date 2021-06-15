@@ -6,10 +6,11 @@ import SimpleForm from './index'
 
 //👇 This default export determines where your story goes in the story list
 export default {
-  title: 'Example/SimpleForm',
+  title: 'My-Components/SimpleForm',
   component: SimpleForm,
   argTypes: {
     backgroundColor: { control: 'color' },
+    padding:{ control : 'number'}
   },
 };
 
@@ -20,7 +21,6 @@ export const withoutStyle = Template.bind({});
 
 withoutStyle.args = {
   /*👇 The args you need here will depend on your component */
-  backgroundColor:'grey',
 };
 
 export const roundedBorder = Template.bind({});
@@ -28,5 +28,5 @@ export const roundedBorder = Template.bind({});
 roundedBorder.args = {
   /*👇 The args you need here will depend on your component */
   borderRadius : '20px',
-  backgroundColor:'grey',
+  padding:'10px'
 };

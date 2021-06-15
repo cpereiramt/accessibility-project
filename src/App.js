@@ -4,14 +4,14 @@ import SimpleForm from './components/ExampleAccessibilityTestComponent/index'
 
 const Container = styled.div`
   width: 100%;
-  border: ${props => `1px solid ${props.theme.colorTheme.backgroundColor}`};
-  background-color: ${props => props.theme.colorTheme.backgroundColor};
-  color: ${({theme: { colorTheme : {font}}}) => font.color};
+  border: ${props => `1px solid ${props.theme.backgroundColor}`};
+  background-color: ${props => props.theme.backgroundColor};
+  color: ${({theme: font}) => font.color};
 `;
 
 const Heading = styled.h1`
-  background-color: ${({ theme: { colorTheme:  { backgroundColor } }} ) => backgroundColor};
-  color: ${({theme: { colorTheme:   {font}}}) => font.color};
+  background-color: ${({ theme:   { backgroundColor } } ) => backgroundColor};
+  color: ${({theme:    {font}}) => font.color};
 `;
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
     <Container>
        <SimpleForm />
         <Heading isHeading={true}>Hello world!</Heading>
-        <h2>By the power of styled-components!</h2>
+        <h2 style={{color: themeObject.font.color}}>By the power of styled-components!</h2>
         {console.log("imprimindo o objeto theme style selecionado.", themeObject)}
       </Container> 
   );
